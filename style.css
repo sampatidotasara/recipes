@@ -1,0 +1,259 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fffaf7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* STICKY HEADER */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ff6f61;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffe8e5;
+}
+
+/* HERO */
+.hero {
+  background: url('https://cdn.pixabay.com/photo/2013/11/29/16/34/berries-221193_1280.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* compensate sticky header */
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #ffd54f;
+  color: #333;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffca28;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ffd54f;
+  color: #ffd54f;
+  margin-left: 1rem;
+}
+
+.btn-outline:hover {
+  background: #ffd54f;
+  color: #333;
+}
+
+/* SECTION */
+.section {
+  padding: 4rem 0;
+  scroll-margin-top: 80px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #d84315;
+}
+
+/* RECIPE GRID */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #ff5722;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FORMS */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ABOUT FLEX */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-flex img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-flex div {
+  flex: 1;
+}
+
+/* NEWSLETTER */
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* CONTACT FORM */
+.contact-form button {
+  background: #4caf50;
+  color: white;
+  border: none;
+}
+
+.contact-form button:hover {
+  background: #388e3c;
+}
+
+/* BG LIGHT */
+.bg-light {
+  background-color: #fff3e0;
+}
+
+/* FOOTER */
+footer {
+  background: #263238;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* RESPONSIVE NAV (optional mobile nav toggle if needed) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #ff6f61;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
